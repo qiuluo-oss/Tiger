@@ -1,5 +1,7 @@
 # 介绍
 Tiger是一款对资产重点系统指纹识别、精准漏扫的工具。第一环节：从大量的资产中提取有用的系统(如OA、VPN、Weblogic...)；第二环节：针对收集到的资产实施精准漏扫，Tiger的漏洞库目前包含历年HW公开的POC和高危的POC。Tiger旨在帮助红队人员在信息收集期间能够快速从C段、大量杂乱的资产中精准定位到易被攻击的系统，并自动化实施精准漏扫。
+![image](https://github.com/user-attachments/assets/3df0b843-69f9-4135-95b3-0dfd8ae9086c)
+
 
 # 目前功能
 ### 重点资产识别，内置指纹库2W+
@@ -17,6 +19,7 @@ Tiger是一款对资产重点系统指纹识别、精准漏扫的工具。第一
 
 # 参数介绍
 ## tiger.exe -h
+
 Usage:
 
   tiger [flags]
@@ -41,6 +44,7 @@ Flags:
   -v, --version         Show version information
 
 ## tiger.exe finger -h
+
 从fofa或者本地文件获取资产进行指纹识别，支持单条url识别。
 
 Usage:
@@ -48,6 +52,7 @@ Usage:
   tiger finger [flags]
 
 Flags:
+
   -d, --dir             目录扫描，默认为false不开启，若为true则开启
   
   -f, --fip string      从fofa提取资产，进行指纹识别，仅仅支持ip或者ip段，例如：192.168.1.1 | 192.168.1.0/24
@@ -72,3 +77,16 @@ Flags:
 
 # 使用
 ### 重点资产识别
+1、若需要对FAFO或HUNTER的资产做指纹识别，需在config.ini中配置FAFO和HUNTER的KEY。
+
+2、对本地的资产做指纹识别：.\tiger.exe finger -l .\target.txt
+![image](https://github.com/user-attachments/assets/be91fa13-8cb6-477b-a690-ef191a34d39b)
+
+### 精准漏扫
+1、精准漏扫，默认false，需要使用时指定：-v true 对目标识别出来的指纹做对应的漏扫，举例若目标是泛微OA，只会使用泛微OA的POC做漏扫，减少被发现的可能性；命令：.\tiger.exe finger -l .\target.txt -v true
+![eb28798cf27a589cdfbc6f9613d5d27](https://github.com/user-attachments/assets/8ca4d123-5340-4111-adff-5001c49e8036)
+
+### 目录扫描
+1、内置150个目录，包括常用的未授权、备份文件、sql文件等，默认为false，需要使用时指定：-d true；当目标是域名时，工具会自动获取"."前后的域名字符串作为目录字典，例如：https://www.baidu.com/，工具会自动获取www.zip、www.7z、www.bak、www.tar.gz、www.rar、baidu.zip、baidu.7z、baidu.bak、baidu.tar.gz、baidu.rar；命令：.\tiger.exe finger -l .\dir.txt -d true
+![image](https://github.com/user-attachments/assets/c3dbbbc1-e6f1-4a27-a851-9062b61a760c)
+
