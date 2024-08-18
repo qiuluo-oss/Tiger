@@ -20,66 +20,18 @@ Tiger是一款对资产重点系统指纹识别、精准漏扫的工具。第一
 # 参数介绍
 ## tiger.exe -h
 
-Usage:
-
-  tiger [flags]
-  
-  tiger [command]
-
-Available Commands:
-
-  finger      tiger的指纹识别、漏洞扫描、目录扫描模块
-  
-  fofaext     tiger的fofa提取模块
-  
-  help        Help about any command
-
-Flags:
-      --config string   config file (default is $HOME/.tiger.yaml)
-      
-  -h, --help            help for tiger
-  
-  -t, --toggle          Help message for toggle
-  
-  -v, --version         Show version information
+![image](https://github.com/user-attachments/assets/d538afd0-bf2e-4f89-94a7-5c9830ae888f)
 
 ## tiger.exe finger -h
 
-从fofa或者本地文件获取资产进行指纹识别，支持单条url识别。
-
-Usage:
-
-  tiger finger [flags]
-
-Flags:
-
-  -d, --dir             目录扫描，默认为false不开启，若为true则开启
-  
-  -f, --fip string      从fofa提取资产，进行指纹识别，仅仅支持ip或者ip段，例如：192.168.1.1 | 192.168.1.0/24
-  
-  -s, --fofa string     从fofa提取资产，进行指纹识别，支持fofa所有语法
-  
-  -h, --help            help for finger
-  
-  -a, --hip string      从hunter提取资产，进行指纹识别，仅仅支持ip或者ip段，例如：192.168.1.1 | 192.168.1.0/24
-  
-  -b, --hunter string   从hunter提取资产，进行指纹识别，支持hunter所有语法
-  
-  -l, --local string    从本地文件读取资产，进行指纹识别，支持无协议，列如：192.168.1.1:9090 | http://192.168.1.1:9090
-  
-  -o, --output string   输出所有结果，当前仅支持json和xlsx后缀的文件。
-  
-  -v, --poc             精准漏扫，默认false不开启，只进行重点资产收集；若为true则开启
-  
-  -p, --proxy string    指定访问目标时的代理，支持http代理和socks5，例如：http://127.0.0.1:8080、socks5://127.0.0.1:8080
-  -t, --thread int      指纹识别线程大小。 (default 100)
-  -u, --url string      识别单个目标。
+![image](https://github.com/user-attachments/assets/39a04ae2-dd2f-4f72-b31c-4b79c2fdc6ef)
 
 # 使用
 ### 重点资产识别
 1、若需要对FAFO或HUNTER的资产做指纹识别，需在config.ini中配置FAFO和HUNTER的KEY。
 
 2、对本地的资产做指纹识别：.\tiger.exe finger -l .\target.txt
+
 ![image](https://github.com/user-attachments/assets/be91fa13-8cb6-477b-a690-ef191a34d39b)
 
 ### 精准漏扫
