@@ -97,8 +97,7 @@ Global Flags:
 
 ![d5d2ff038adbc81c69dc731ba8e782d](https://github.com/user-attachments/assets/3aee75a1-daa7-444e-b55f-9c65be810ed1)
 
-
-2、对FOFA收集的资产做指纹识别
+2、对FOFA收集的资产做指纹识别：
 
 ```
 .\tiger.exe finger -s 'domain="hnys.edu.cn" || cname_domain="hnys.edu.cn" || cname="hnys.edu.cn" ||cert="hnys.edu.cn" || cert.subject="河南艺术职业学院" || cert.subject.org="河南艺术职业学院" ||cert.subject.cn="hnys.edu.cn" || icp="豫ICP备14014451号"'
@@ -117,7 +116,7 @@ Global Flags:
 
 #### 精准漏扫
 
-1、精准漏扫，默认false，需要使用时指定：-v true 对目标识别出来的指纹做对应的漏扫，举例若目标是泛微OA，只会使用泛微OA的POC做漏扫，减少被发现的可能性；命令：
+1、精准漏扫，默认false，需要使用时指定：`-v true` 对目标识别出来的指纹做对应的漏扫，举例若目标是泛微OA，只会使用泛微OA的POC做漏扫，减少被发现的可能性；命令：
 
 ```
 .\tiger.exe finger -l .\target.txt -v true
@@ -127,7 +126,11 @@ Global Flags:
 
 #### 目录扫描
 
-1、内置150个目录，包括常用的未授权、备份文件、sql文件等，默认为false，需要使用时指定：-d true；当目标是域名时，工具会自动获取"."前后的域名字符串作为目录字典，例如：https://www.baidu.com/， 工具会自动获取www.zip、www.7z、www.bak、www.tar.gz、www.rar、baidu.zip、baidu.7z、baidu.bak、baidu.tar.gz、baidu.rar；命令：.\tiger.exe finger -l .\dir.txt -d true
+1、内置150个目录，包括常用的未授权、备份文件、sql文件等，默认为false，需要使用时指定：`-d true`，当目标是域名时，工具会自动获取"."前后的域名字符串作为目录字典，例如：https://www.baidu.com/， 工具会自动获取www.zip、www.7z、www.bak、www.tar.gz、www.rar、baidu.zip、baidu.7z、baidu.bak、baidu.tar.gz、baidu.rar；命令：
+
+```
+.\tiger.exe finger -l .\dir.txt -d true
+```
 
 ![image](https://github.com/user-attachments/assets/c3dbbbc1-e6f1-4a27-a851-9062b61a760c)
 
