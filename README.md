@@ -1,3 +1,9 @@
+# 更新日志
+
+#### 2024.08.19
+1、新增漏洞：中远麒麟堡垒机admin.php 存在SQL 注入漏洞、UploadFileFromClientServiceForClient接口存在任意文件上传漏洞、致远OA M1 server RCE
+2、优化部分指纹规则
+
 # 前世今生
 
 现在大多数的漏扫工具都是一股脑蜂拥而上，管你什么CMS，所有的POC都会尝试一遍。在我看来这种漏扫方式有很大的缺点：
@@ -156,109 +162,112 @@ Global Flags:
 
 # POC支持清单
 
-| 分类       | 应用                     | 漏洞名称                                                     |
-| ---------- | ------------------------ | ------------------------------------------------------------ |
-| Framework  | Laravel                  | CVE-2017-16894                                               |
-|            |                          | CVE-2021-3129                                                |
-|            |                          | CVE-2022-40734                                               |
-|            | PHP                      | PHP 8.1.0-dev 开发版本后门                                   |
-|            |                          | PHP phpinfo() 信息泄露                                       |
-|            |                          | PHP文件包含漏洞(利用phpinfo)                                 |
-|            | Shiro                    | 默认key                                                      |
-|            | Spring                   | CVE-2018-1273                                                |
-|            |                          | CVE-2020-5410                                                |
-|            |                          | CVE-2024-40348                                               |
-|            | Thinkphp                 | CNVD-2018-24942                                              |
-|            |                          | thinkphp2.x rce                                              |
-|            |                          | thinkphp3.2.x rce                                            |
-|            |                          | thinkphp_index_showid_rce                                    |
-|            |                          | ThinkPHP5 SQL Injection Vulnerability                        |
-|            |                          | thinkphp_pay_orderid_sqli                                    |
-|            |                          | thinkphp_multi_sql_leak                                      |
-|            |                          | thinkphp_driver_display_rce                                  |
-|            |                          | thinkphp_invoke_func_code_exec                               |
-|            | nodejs                   | CVE-2021-21315                                               |
-|            |                          | CVE-2017-14849                                               |
-| middleware | nginx                    | nginxWebUI远程命令执行                                       |
-|            |                          | Nginx 解析漏洞                                               |
-|            | Tomcat                   | CVE-2017-12615                                               |
-|            |                          | CVE-2019-0232                                                |
-|            |                          | CVE-2024-21733                                               |
-|            |                          | Apache Tomcat 弱口令                                         |
-|            | Weblogic                 | CVE-2014-4210                                                |
-| redteam    | 用友畅捷通               | 用友畅捷通 SQL注入（site_id延时注入）                        |
-|            |                          | 畅捷通T+ DownloadProxy.aspx 任意文件读取漏洞                 |
-|            |                          | 用友畅捷通T+GetStoreWarehouseByStore RCE                     |
-|            |                          | 畅捷通T+ RecoverPassword.aspx 管理员密码修改漏洞             |
-|            | dahua                    | 大华智慧园区综合管理平台devicePoint_addImgIco任意文件上传漏洞 |
-|            |                          | 大华DSS itcBulletin SQL 注入漏洞                             |
-|            |                          | 大华智慧园区综合管理平台 任意文件读取漏洞                    |
-|            |                          | 大华智慧园区任意密码读取漏洞                                 |
-|            |                          | 大华智慧园区综合管理平台 video 任意文件上传漏洞              |
-|            | druid                    | Alibaba Druid Monitor 弱口令                                 |
-|            |                          | Alibaba Druid Monitor 未授权访问                             |
-|            |                          | Apache Druid 未授权访问                                      |
-|            | finereport               | CNVD-2018-04757                                              |
-|            | H3C                      | H3C IMC dynamiccontent.properties.xhtm 远程命令执行          |
-|            |                          | H3C多系列路由器前台RCE漏洞                                   |
-|            | HIKVISION                | HIKVISION 综合安防管理平台env信息泄露                        |
-|            |                          | 海康威视isecure center 综合安防管理平台存在任意文件上传漏洞  |
-|            |                          | HIKVISION视频编码设备任意文件下载                            |
-|            | 宏景eHR                  | 宏景eHR SQL注入                                              |
-|            |                          | 宏景eHR文件上传                                              |
-|            | 金和OA                   | 金和OA C6 UploadFileEditor.aspx存在sql注入漏洞               |
-|            | 金蝶云星空               | 金蝶云星空 CommonFileserver 任意文件读取                     |
-|            |                          | 金蝶云星空Kingdee- erp-Unserialize-RCE漏洞                   |
-|            | 蓝凌OA                   | 蓝凌OA custom.jsp 任意文件读取漏洞                           |
-|            |                          | 蓝凌OA treexml.tmpl命令执行                                  |
-|            | Nacos                    | Nacos 弱密码                                                 |
-|            |                          | 开启授权后identity硬编码绕过                                 |
-|            |                          | jwt secret key 硬编码绕过                                    |
-|            |                          | Nacos 未授权访问                                             |
-|            |                          | nacos-Sync 未授权                                            |
-|            | 企望制造ERP              | 企望制造ERP_comboxstore.action远程命令执行漏洞               |
-|            | Hytec Inter HWL-2511-SS  | Hytec Inter HWL-2511-SS popen.cgi命令注入                    |
-|            | 致远OA                   | 致远OA A6 sql注入漏洞                                        |
-|            |                          | 致远OA A8 htmlofficeservlet 任意文件上传漏洞                 |
-|            |                          | 致远OA getSessionList.jsp Session泄漏漏洞(后台可getshell)    |
-|            |                          | 致远OA Session泄露(thirdpartyController.do)漏洞              |
-|            | 深信服                   | 深信服SG上网管理系统任意文件读取                             |
-|            |                          | 深信服应用交付报表系统 文件读取                              |
-|            |                          | 深信服应用交付管理系统 RCE                                   |
-|            | 360天擎                  | 数据库信息泄露漏洞                                           |
-|            |                          | 360天擎终端安全管理系统前台SQL注入                           |
-|            |                          | 天擎 rptsvr 任意文件上传漏洞                                 |
-|            |                          | 360新天擎终端安全管理系统信息泄露                            |
-|            | 通达OA                   | 通达OA sql注入(/general/reportshop/utils/get_datas.php)      |
-|            |                          | 通达OA v11.6 insert SQL注入漏洞                              |
-|            |                          | 通达OA v11.9 getdata 任意命令执行漏洞                        |
-|            |                          | 通达OA v2017 video_file.php 任意文件下载漏洞                 |
-|            | 泛微                     | 泛微Weaver E-Office9前台文件包含                             |
-|            |                          | 泛微E-Office9文件上传漏洞                                    |
-|            |                          | 泛微E-Cology9 WorkPlanService 前台SQL注入漏洞(XVE-2024-18112) |
-|            |                          | 泛微运维平台存在任意管理员用户创建漏洞                       |
-|            | 用友NC                   | 用友nc-cloud RCE                                             |
-|            |                          | 用友NC-Cloud 远程命令执行                                    |
-|            |                          | 用友GRP-U8存在信息泄露                                       |
-|            |                          | 用友时空 KSOA servletimagefield 文件 sKeyvalue 参数SQL 注入  |
-|            |                          | 用友 NC Cloud jsinvoke 任意文件上传                          |
-|            |                          | 用友NCfileupload命令执行漏洞                                 |
-|            |                          | 用友 NC NCFindWeb 任意文件读取漏洞                           |
-|            |                          | NC bsh.servlet.BshServlet 远程命令执行漏洞                   |
-|            | 禅道                     | 禅道16.5 SQL注入(CNVD-2022-42853)                            |
-|            |                          | 禅道11.6版本任意文件读取漏洞                                 |
-| web        | Chamilo                  | Chamilo additional_webservices.php RCE                       |
-|            | Eramba                   | Eramba任意代码执行                                           |
-|            | 红海 EHR                 | 红海 EHR 系统pc.mob sql 注入漏洞                             |
-|            | LiveBOS                  | LiveBOS ShowImage.do 任意文件读取漏洞                        |
-|            | Metabase                 | Metabase远程命令执行漏洞 (CVE-2023-38646)                    |
-|            | Apache OFBiz             | Apache OFBiz代码执行(CVE-2024-38856) RCE                     |
-|            | 1Panel                   | 1Panel loadfile后台文件读取漏洞                              |
-|            | 契约锁电子签章平台       | 契约锁电子签章平台add远程命令执行漏洞                        |
-|            |                          | 契约锁电子签章平台ukeysign存在远程命令执行漏洞               |
-|            | Smartbi                  | Smartbi 默认用户登陆绕过漏洞                                 |
-|            | 智慧校园安校易管理系统   | 智慧校园安校易管理系统FileUpAd任意文件上传漏洞               |
-|            | 云时空-社会化商业ERP系统 | 云时空-社会化商业ERP系统session泄露 接管后台                 |
+| 分类       | 应用                        | 漏洞名称                                                     |
+| ---------- | --------------------------- | ------------------------------------------------------------ |
+| Framework  | Laravel                     | CVE-2017-16894                                               |
+|            |                             | CVE-2021-3129                                                |
+|            |                             | CVE-2022-40734                                               |
+|            | PHP                         | PHP 8.1.0-dev 开发版本后门                                   |
+|            |                             | PHP phpinfo() 信息泄露                                       |
+|            |                             | PHP文件包含漏洞(利用phpinfo)                                 |
+|            | Shiro                       | 默认key                                                      |
+|            | Spring                      | CVE-2018-1273                                                |
+|            |                             | CVE-2020-5410                                                |
+|            |                             | CVE-2024-40348                                               |
+|            | Thinkphp                    | CNVD-2018-24942                                              |
+|            |                             | thinkphp2.x rce                                              |
+|            |                             | thinkphp3.2.x rce                                            |
+|            |                             | thinkphp_index_showid_rce                                    |
+|            |                             | ThinkPHP5 SQL Injection Vulnerability                        |
+|            |                             | thinkphp_pay_orderid_sqli                                    |
+|            |                             | thinkphp_multi_sql_leak                                      |
+|            |                             | thinkphp_driver_display_rce                                  |
+|            |                             | thinkphp_invoke_func_code_exec                               |
+|            | nodejs                      | CVE-2021-21315                                               |
+|            |                             | CVE-2017-14849                                               |
+| middleware | nginx                       | nginxWebUI远程命令执行                                       |
+|            |                             | Nginx 解析漏洞                                               |
+|            | Tomcat                      | CVE-2017-12615                                               |
+|            |                             | CVE-2019-0232                                                |
+|            |                             | CVE-2024-21733                                               |
+|            |                             | Apache Tomcat 弱口令                                         |
+|            | Weblogic                    | CVE-2014-4210                                                |
+| redteam    | 用友畅捷通                  | 用友畅捷通 SQL注入（site_id延时注入）                        |
+|            |                             | 畅捷通T+ DownloadProxy.aspx 任意文件读取漏洞                 |
+|            |                             | 用友畅捷通T+GetStoreWarehouseByStore RCE                     |
+|            |                             | 畅捷通T+ RecoverPassword.aspx 管理员密码修改漏洞             |
+|            | dahua                       | 大华智慧园区综合管理平台devicePoint_addImgIco任意文件上传漏洞 |
+|            |                             | 大华DSS itcBulletin SQL 注入漏洞                             |
+|            |                             | 大华智慧园区综合管理平台 任意文件读取漏洞                    |
+|            |                             | 大华智慧园区任意密码读取漏洞                                 |
+|            |                             | 大华智慧园区综合管理平台 video 任意文件上传漏洞              |
+|            | druid                       | Alibaba Druid Monitor 弱口令                                 |
+|            |                             | Alibaba Druid Monitor 未授权访问                             |
+|            |                             | Apache Druid 未授权访问                                      |
+|            | finereport                  | CNVD-2018-04757                                              |
+|            | 中远麒麟堡垒机              | 中远麒麟堡垒机admin.php 存在SQL 注入漏洞                     |
+|            | H3C                         | H3C IMC dynamiccontent.properties.xhtm 远程命令执行          |
+|            |                             | H3C多系列路由器前台RCE漏洞                                   |
+|            | HIKVISION                   | HIKVISION 综合安防管理平台env信息泄露                        |
+|            |                             | 海康威视isecure center 综合安防管理平台存在任意文件上传漏洞  |
+|            |                             | HIKVISION视频编码设备任意文件下载                            |
+|            | 宏景eHR                     | 宏景eHR SQL注入                                              |
+|            |                             | 宏景eHR文件上传                                              |
+|            | 金和OA                      | 金和OA C6 UploadFileEditor.aspx存在sql注入漏洞               |
+|            | 金蝶云星空                  | 金蝶云星空 CommonFileserver 任意文件读取                     |
+|            |                             | 金蝶云星空Kingdee- erp-Unserialize-RCE漏洞                   |
+|            | 蓝凌OA                      | 蓝凌OA custom.jsp 任意文件读取漏洞                           |
+|            |                             | 蓝凌OA treexml.tmpl命令执行                                  |
+|            | Nacos                       | Nacos 弱密码                                                 |
+|            |                             | 开启授权后identity硬编码绕过                                 |
+|            |                             | jwt secret key 硬编码绕过                                    |
+|            |                             | Nacos 未授权访问                                             |
+|            |                             | nacos-Sync 未授权                                            |
+|            | 企望制造ERP                 | 企望制造ERP_comboxstore.action远程命令执行漏洞               |
+|            | Hytec Inter HWL-2511-SS     | Hytec Inter HWL-2511-SS popen.cgi命令注入                    |
+|            | 致远OA                      | 致远OA A6 sql注入漏洞                                        |
+|            |                             | 致远OA A8 htmlofficeservlet 任意文件上传漏洞                 |
+|            |                             | 致远OA getSessionList.jsp Session泄漏漏洞(后台可getshell)    |
+|            |                             | 致远OA Session泄露(thirdpartyController.do)漏洞              |
+|            |                             | 致远OA M1 server RCE                                         |
+|            | 亿赛通 电子文档安全管理系统 | UploadFileFromClientServiceForClient接口存在任意文件上传漏洞 |
+|            | 深信服                      | 深信服SG上网管理系统任意文件读取                             |
+|            |                             | 深信服应用交付报表系统 文件读取                              |
+|            |                             | 深信服应用交付管理系统 RCE                                   |
+|            | 360天擎                     | 数据库信息泄露漏洞                                           |
+|            |                             | 360天擎终端安全管理系统前台SQL注入                           |
+|            |                             | 天擎 rptsvr 任意文件上传漏洞                                 |
+|            |                             | 360新天擎终端安全管理系统信息泄露                            |
+|            | 通达OA                      | 通达OA sql注入(/general/reportshop/utils/get_datas.php)      |
+|            |                             | 通达OA v11.6 insert SQL注入漏洞                              |
+|            |                             | 通达OA v11.9 getdata 任意命令执行漏洞                        |
+|            |                             | 通达OA v2017 video_file.php 任意文件下载漏洞                 |
+|            | 泛微                        | 泛微Weaver E-Office9前台文件包含                             |
+|            |                             | 泛微E-Office9文件上传漏洞                                    |
+|            |                             | 泛微E-Cology9 WorkPlanService 前台SQL注入漏洞(XVE-2024-18112) |
+|            |                             | 泛微运维平台存在任意管理员用户创建漏洞                       |
+|            | 用友NC                      | 用友nc-cloud RCE                                             |
+|            |                             | 用友NC-Cloud 远程命令执行                                    |
+|            |                             | 用友GRP-U8存在信息泄露                                       |
+|            |                             | 用友时空 KSOA servletimagefield 文件 sKeyvalue 参数SQL 注入  |
+|            |                             | 用友 NC Cloud jsinvoke 任意文件上传                          |
+|            |                             | 用友NCfileupload命令执行漏洞                                 |
+|            |                             | 用友 NC NCFindWeb 任意文件读取漏洞                           |
+|            |                             | NC bsh.servlet.BshServlet 远程命令执行漏洞                   |
+|            | 禅道                        | 禅道16.5 SQL注入(CNVD-2022-42853)                            |
+|            |                             | 禅道11.6版本任意文件读取漏洞                                 |
+| web        | Chamilo                     | Chamilo additional_webservices.php RCE                       |
+|            | Eramba                      | Eramba任意代码执行                                           |
+|            | 红海 EHR                    | 红海 EHR 系统pc.mob sql 注入漏洞                             |
+|            | LiveBOS                     | LiveBOS ShowImage.do 任意文件读取漏洞                        |
+|            | Metabase                    | Metabase远程命令执行漏洞 (CVE-2023-38646)                    |
+|            | Apache OFBiz                | Apache OFBiz代码执行(CVE-2024-38856) RCE                     |
+|            | 1Panel                      | 1Panel loadfile后台文件读取漏洞                              |
+|            | 契约锁电子签章平台          | 契约锁电子签章平台add远程命令执行漏洞                        |
+|            |                             | 契约锁电子签章平台ukeysign存在远程命令执行漏洞               |
+|            | Smartbi                     | Smartbi 默认用户登陆绕过漏洞                                 |
+|            | 智慧校园安校易管理系统      | 智慧校园安校易管理系统FileUpAd任意文件上传漏洞               |
+|            | 云时空-社会化商业ERP系统    | 云时空-社会化商业ERP系统session泄露 接管后台                 |
 
 
 
