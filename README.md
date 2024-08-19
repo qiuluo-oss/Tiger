@@ -137,7 +137,8 @@ Global Flags:
 .\tiger.exe finger -s 'domain="hnys.edu.cn" || cname_domain="hnys.edu.cn" || cname="hnys.edu.cn" ||cert="hnys.edu.cn" || cert.subject="河南艺术职业学院" || cert.subject.org="河南艺术职业学院" ||cert.subject.cn="hnys.edu.cn" || icp="豫ICP备14014451号"' -o test.json
 ```
 
-![image-20240819090047302](C:\Users\fasad\AppData\Roaming\Typora\typora-user-images\image-20240819090047302.png)
+![e92117723bab3e6e5e348e988bf3e3b](https://github.com/user-attachments/assets/88846d8f-b226-4b25-a8e6-060396a09819)
+
 
 2、保存xlsx格式，指定参数`-o`，输出文件名`xxx.xlsx`
 
@@ -145,7 +146,8 @@ Global Flags:
 .\tiger.exe finger -s 'domain="hnys.edu.cn" || cname_domain="hnys.edu.cn" || cname="hnys.edu.cn" ||cert="hnys.edu.cn" || cert.subject="河南艺术职业学院" || cert.subject.org="河南艺术职业学院" ||cert.subject.cn="hnys.edu.cn" || icp="豫ICP备14014451号"' -o test.xlsx
 ```
 
-![image-20240819090342781](C:\Users\fasad\AppData\Roaming\Typora\typora-user-images\image-20240819090342781.png)
+![938a0f6f97b8a0d92b6abdea672c3af](https://github.com/user-attachments/assets/57bb453a-ae86-4dea-a115-fc4f4814b635)
+
 
 # POC支持清单
 
