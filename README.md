@@ -95,7 +95,8 @@ Global Flags:
 
 1、若需要对FAFO或HUNTER的资产做指纹识别，需在config.ini中配置FAFO和HUNTER的KEY
 
-![image-20240819084840169](C:\Users\fasad\AppData\Roaming\Typora\typora-user-images\image-20240819084840169.png)
+![d5d2ff038adbc81c69dc731ba8e782d](https://github.com/user-attachments/assets/3aee75a1-daa7-444e-b55f-9c65be810ed1)
+
 
 2、对FOFA收集的资产做指纹识别
 
@@ -103,7 +104,8 @@ Global Flags:
 .\tiger.exe finger -s 'domain="hnys.edu.cn" || cname_domain="hnys.edu.cn" || cname="hnys.edu.cn" ||cert="hnys.edu.cn" || cert.subject="河南艺术职业学院" || cert.subject.org="河南艺术职业学院" ||cert.subject.cn="hnys.edu.cn" || icp="豫ICP备14014451号"'
 ```
 
-![image-20240819085641952](C:\Users\fasad\AppData\Roaming\Typora\typora-user-images\image-20240819085641952.png)
+![23fc95932f9299d453082b631092fb2](https://github.com/user-attachments/assets/9bf64144-f6c8-44c8-923c-08668611c6f1)
+
 
 3、对本地的资产做指纹识别：
 
