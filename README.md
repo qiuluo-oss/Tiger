@@ -1,5 +1,25 @@
 # 更新日志
 
+#### 2024.08.20
+
+```
+新增端口服务未授权检测，包括：
+  1、CouchDB 未授权访问
+  2、Docker 未授权访问
+  3、Elasticsearch 存在未授权访问
+  4、FTP 未授权访问
+  5、Hadoop 未授权访问
+  6、JBoss 未授权访问
+  7、Jenkins 未授权访问
+  8、Memcached 未授权访问
+  9、mongodb 未授权访问
+  10、MySQL 空口令漏洞
+  11、PostgreSQL 未授权访问
+  12、redis 未授权访问
+  13、Rsync 未授权访问
+  14、Zookeeper 未授权访问
+```
+
 #### 2024.08.19
 
 ```
