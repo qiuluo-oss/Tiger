@@ -3,7 +3,7 @@
 #### 2024.08.19
 
 ```
-1、新增漏洞：中远麒麟堡垒机admin.php 存在SQL 注入漏洞、UploadFileFromClientServiceForClient接口存在任意文件上传漏洞、致远OA M1 server RCE。
+1、新增漏洞：中远麒麟堡垒机admin.php 存在SQL 注入漏洞、亿赛通 电子文档安全管理系统UploadFileFromClientServiceForClient接口存在任意文件上传漏洞、致远OA M1 server RCE。
 2、优化部分指纹、添加指纹信息。
 ```
 
