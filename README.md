@@ -4,20 +4,20 @@
 
 ```
 新增端口服务未授权检测，包括：
-  1、CouchDB 未授权访问
-  2、Docker 未授权访问
-  3、Elasticsearch 存在未授权访问
-  4、FTP 未授权访问
-  5、Hadoop 未授权访问
-  6、JBoss 未授权访问
-  7、Jenkins 未授权访问
-  8、Memcached 未授权访问
-  9、mongodb 未授权访问
-  10、MySQL 空口令漏洞
-  11、PostgreSQL 未授权访问
-  12、redis 未授权访问
-  13、Rsync 未授权访问
-  14、Zookeeper 未授权访问
+1）、CouchDB 未授权访问
+2）、Docker 未授权访问
+3）、Elasticsearch 存在未授权访问
+4）、FTP 未授权访问
+5）、Hadoop 未授权访问
+6）、JBoss 未授权访问
+7）、Jenkins 未授权访问
+8）、Memcached 未授权访问
+9）、mongodb 未授权访问
+10）、MySQL 空口令漏洞
+11）、PostgreSQL 未授权访问
+12）、redis 未授权访问
+13）、Rsync 未授权访问
+14）、Zookeeper 未授权访问
 ```
 
 #### 2024.08.19
@@ -51,6 +51,8 @@ Tiger是一款对资产重点系统指纹识别、精准漏扫的工具。第一
 #### 针对重点资产进行精准漏扫，内置POC库100+
 
 #### 目录扫描
+
+#### 端口服务未授权检测，支持14种未授权检测
 
 # 未来计划
 
@@ -163,6 +165,36 @@ Global Flags:
 
 ![image](https://github.com/user-attachments/assets/c3dbbbc1-e6f1-4a27-a851-9062b61a760c)
 
+#### 端口服务未授权检测
+
+1、端口服务未授权检测默认关闭，需要开启时指定参数：`-P true`，支持14种未授权检测，详情如下
+
+```
+1）、CouchDB 未授权访问
+2）、Docker 未授权访问
+3）、Elasticsearch 存在未授权访问
+4）、FTP 未授权访问
+5）、Hadoop 未授权访问
+6）、JBoss 未授权访问
+7）、Jenkins 未授权访问
+8）、Memcached 未授权访问
+9）、mongodb 未授权访问
+10）、MySQL 空口令漏洞
+11）、PostgreSQL 未授权访问
+12）、redis 未授权访问
+13）、Rsync 未授权访问
+14）、Zookeeper 未授权访问
+```
+
+2、对FAFO收集的资产进行端口服务未授权检测，命令：
+
+```
+.\tiger.exe finger -s ip="x.x.x.x/24" -P true
+```
+
+![image](https://github.com/user-attachments/assets/76724cfc-a00f-4a68-b572-147d40f0d645)
+
+
 #### 输出保存格式
 
 1、保存json格式，指定参数`-o`，输出文件名`xxx.json`
@@ -215,6 +247,20 @@ Global Flags:
 |            |                             | CVE-2024-21733                                               |
 |            |                             | Apache Tomcat 弱口令                                         |
 |            | Weblogic                    | CVE-2014-4210                                                |
+| port       | CouchDB                     | 5984端口CouchDB未授权访问                                    |
+|            | Docker                      | 2375端口Docker未授权访问                                     |
+|            | Elasticsearch               | 9200端口Elasticsearch未授权访问                              |
+|            | ftp                         | 21端口ftp未授权访问                                          |
+|            | Hadoop                      | 50070端口Hadoop未授权访问                                    |
+|            | JBoss                       | 8080端口JBoss未授权访问                                      |
+|            | Jenkins                     | 8080端口Jenkins未授权访问                                    |
+|            | Memcached                   | 11211端口Memcached未授权访问                                 |
+|            | MongoDB                     | 27017端口MongoDB未授权访问                                   |
+|            | MySQL                       | 3306端口MySQL空口令                                          |
+|            | PostgreSQL                  | 5432端口PostgreSQL未授权访问                                 |
+|            | Redis                       | 6379端口redis未授权访问                                      |
+|            | Rsync                       | 873端口Rsync未授权访问                                       |
+|            | Zookeeper                   | 2181端口Zookeeper未授权访问                                  |
 | redteam    | 用友畅捷通                  | 用友畅捷通 SQL注入（site_id延时注入）                        |
 |            |                             | 畅捷通T+ DownloadProxy.aspx 任意文件读取漏洞                 |
 |            |                             | 用友畅捷通T+GetStoreWarehouseByStore RCE                     |
