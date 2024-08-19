@@ -77,7 +77,7 @@ Usage:
   tiger [command]
 
 Available Commands:
-  finger      tiger的指纹识别、漏洞扫描、目录扫描模块
+  finger      tiger的指纹识别、漏洞扫描、目录扫描、端口服务未授权检测模块
   fofaext     tiger的fofa提取模块
   help        Help about any command
 
@@ -90,7 +90,8 @@ Flags:
 Use "tiger [command] --help" for more information about a command
 ```
 
-![image](https://github.com/user-attachments/assets/d538afd0-bf2e-4f89-94a7-5c9830ae888f)
+![image](https://github.com/user-attachments/assets/83f92430-7c87-41c5-9b8e-a90462bc43ec)
+
 
 #### tiger.exe finger -h
 
@@ -110,6 +111,7 @@ Flags:
   -l, --local string    从本地文件读取资产，进行指纹识别，支持无协议，列如：192.168.1.1:9090 | http://192.168.1.1:9090
   -o, --output string   输出所有结果，当前仅支持json和xlsx后缀的文件。
   -v, --poc             精准漏扫，默认false不开启，只进行重点资产收集；若为true则开启
+  -P, --port_server     端口服务未授权扫描，默认为false不开启，若为true则开启
   -p, --proxy string    指定访问目标时的代理，支持http代理和socks5，例如：http://127.0.0.1:8080、socks5://127.0.0.1:8080
   -t, --thread int      指纹识别线程大小。 (default 100)
   -u, --url string      识别单个目标。
@@ -118,7 +120,8 @@ Global Flags:
       --config string   config file (default is $HOME/.tiger.yaml)
 ```
 
-![image](https://github.com/user-attachments/assets/39a04ae2-dd2f-4f72-b31c-4b79c2fdc6ef)
+![image](https://github.com/user-attachments/assets/8066a968-7f96-468b-be39-39ea3921cbec)
+
 
 # 使用
 
