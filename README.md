@@ -1,5 +1,20 @@
 # 更新日志
 
+#### 2024.08.21 发布版本V1.0.3，优化部分指纹，新增10个POC
+
+```
+1）、致远M1移动端存在未授权访问
+2）、29网课交单平台epay.php存在SQL注入漏洞
+3）、H3C iMC智能管理中心RCE
+4）、3C环境自动监测监控系统ReadLog文件读取漏洞
+5）、360天擎终端安全管理系统前台SQL注入
+6）、AJ-Report开源数据大屏存在远程命令执行漏洞
+7）、九思OA /jsoa/WebServiceProxy XXE漏洞
+8）、APP分发签名系统index-uplog.php存在任意文件上传漏洞
+9）、智联云采 SRM2.0 runtimeLog/download 任意文件读取漏洞
+10）、AList云盘 未授权访问
+```
+
 #### 2024.08.20 发布版本V1.0.2，添加端口服务未授权检测
 
 ```
@@ -279,6 +294,7 @@ Global Flags:
 |            | 中远麒麟堡垒机              | 中远麒麟堡垒机admin.php 存在SQL 注入漏洞                     |
 |            | H3C                         | H3C IMC dynamiccontent.properties.xhtm 远程命令执行          |
 |            |                             | H3C多系列路由器前台RCE漏洞                                   |
+|            |                             | H3C iMC智能管理中心 RCE                                      |
 |            | HIKVISION                   | HIKVISION 综合安防管理平台env信息泄露                        |
 |            |                             | 海康威视isecure center 综合安防管理平台存在任意文件上传漏洞  |
 |            |                             | HIKVISION视频编码设备任意文件下载                            |
@@ -301,6 +317,7 @@ Global Flags:
 |            |                             | 致远OA getSessionList.jsp Session泄漏漏洞(后台可getshell)    |
 |            |                             | 致远OA Session泄露(thirdpartyController.do)漏洞              |
 |            |                             | 致远OA M1 server RCE                                         |
+|            |                             | 致远M1移动端存在未授权访问                                   |
 |            | 亿赛通 电子文档安全管理系统 | UploadFileFromClientServiceForClient接口存在任意文件上传漏洞 |
 |            | 深信服                      | 深信服SG上网管理系统任意文件读取                             |
 |            |                             | 深信服应用交付报表系统 文件读取                              |
@@ -309,6 +326,7 @@ Global Flags:
 |            |                             | 360天擎终端安全管理系统前台SQL注入                           |
 |            |                             | 天擎 rptsvr 任意文件上传漏洞                                 |
 |            |                             | 360新天擎终端安全管理系统信息泄露                            |
+|            |                             | 360天擎终端安全管理系统前台SQL注入                           |
 |            | 通达OA                      | 通达OA sql注入(/general/reportshop/utils/get_datas.php)      |
 |            |                             | 通达OA v11.6 insert SQL注入漏洞                              |
 |            |                             | 通达OA v11.9 getdata 任意命令执行漏洞                        |
@@ -317,6 +335,7 @@ Global Flags:
 |            |                             | 泛微E-Office9文件上传漏洞                                    |
 |            |                             | 泛微E-Cology9 WorkPlanService 前台SQL注入漏洞(XVE-2024-18112) |
 |            |                             | 泛微运维平台存在任意管理员用户创建漏洞                       |
+|            | 九思OA                      | /jsoa/WebServiceProxy XXE漏洞                                |
 |            | 用友NC                      | 用友nc-cloud RCE                                             |
 |            |                             | 用友NC-Cloud 远程命令执行                                    |
 |            |                             | 用友GRP-U8存在信息泄露                                       |
@@ -339,6 +358,12 @@ Global Flags:
 |            | Smartbi                     | Smartbi 默认用户登陆绕过漏洞                                 |
 |            | 智慧校园安校易管理系统      | 智慧校园安校易管理系统FileUpAd任意文件上传漏洞               |
 |            | 云时空-社会化商业ERP系统    | 云时空-社会化商业ERP系统session泄露 接管后台                 |
+|            | 29网课交单平台              | epay.php存在SQL注入漏洞                                      |
+|            | 3C环境自动监测监控系统      | ReadLog文件读取漏洞                                          |
+|            | AJ-Report                   | 开源数据大屏存在远程命令执行漏洞                             |
+|            | APP分发签名系统             | index-uplog.php存在任意文件上传漏洞                          |
+|            | 智联云采 SRM2.0             | runtimeLog/download 任意文件读取漏洞                         |
+|            | AList云盘                   | 未授权访问                                                   |
 
 
 
