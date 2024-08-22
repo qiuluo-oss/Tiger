@@ -1,5 +1,20 @@
 # 更新日志
 
+#### 2024.08.22 发布版本V1.0.4，优化Alibaba Canal、Apache APISIX 、用友NC等部分指纹，新增10个POC
+
+```
+1）、Alibaba Canal 信息泄露
+2）、Alibaba Canal 默认弱口令漏洞
+3）、fastjson CVE-2017-18349
+4）、ActiveMQ物理路径泄漏漏洞
+5）、Apache ActiveMQ 弱口令
+6）、Apache ActiveMQ 远程代码执行漏洞(CVE-2016-3088)
+7）、用友NC/portal/pt/psnImage/download 接口存在SQL注入漏洞
+8）、用友NC /portal/pt/link/content 接口存在SQL注入漏洞
+9）、Apache APISIX Dashboard 身份验证绕过漏洞（CVE-2021-45232）
+10）、Apache APISIX 默认密钥漏洞（CVE-2020-13945）
+```
+
 #### 2024.08.21 发布版本V1.0.3，优化九思OA、AJ-Report等部分指纹，新增10个POC
 
 ```
@@ -264,6 +279,9 @@ Global Flags:
 |            |                             | CVE-2024-21733                                               |
 |            |                             | Apache Tomcat 弱口令                                         |
 |            | Weblogic                    | CVE-2014-4210                                                |
+|            | ActiveMQ                    | 物理路径泄漏漏洞                                             |
+|            |                             | 弱口令                                                       |
+|            |                             | 远程代码执行漏洞(CVE-2016-3088)                              |
 | port       | CouchDB                     | 5984端口CouchDB未授权访问                                    |
 |            | Docker                      | 2375端口Docker未授权访问                                     |
 |            | Elasticsearch               | 9200端口Elasticsearch未授权访问                              |
@@ -291,6 +309,7 @@ Global Flags:
 |            |                             | Alibaba Druid Monitor 未授权访问                             |
 |            |                             | Apache Druid 未授权访问                                      |
 |            | finereport                  | CNVD-2018-04757                                              |
+|            | fastjson                    | CVE-2017-18349                                               |
 |            | 中远麒麟堡垒机              | 中远麒麟堡垒机admin.php 存在SQL 注入漏洞                     |
 |            | H3C                         | H3C IMC dynamiccontent.properties.xhtm 远程命令执行          |
 |            |                             | H3C多系列路由器前台RCE漏洞                                   |
@@ -344,6 +363,8 @@ Global Flags:
 |            |                             | 用友NCfileupload命令执行漏洞                                 |
 |            |                             | 用友 NC NCFindWeb 任意文件读取漏洞                           |
 |            |                             | NC bsh.servlet.BshServlet 远程命令执行漏洞                   |
+|            |                             | /portal/pt/psnImage/download 接口存在SQL注入漏洞             |
+|            |                             | /portal/pt/link/content 接口存在SQL注入漏洞                  |
 |            | 禅道                        | 禅道16.5 SQL注入(CNVD-2022-42853)                            |
 |            |                             | 禅道11.6版本任意文件读取漏洞                                 |
 | web        | Chamilo                     | Chamilo additional_webservices.php RCE                       |
@@ -364,6 +385,10 @@ Global Flags:
 |            | APP分发签名系统             | index-uplog.php存在任意文件上传漏洞                          |
 |            | 智联云采 SRM2.0             | runtimeLog/download 任意文件读取漏洞                         |
 |            | AList云盘                   | 未授权访问                                                   |
+|            | Alibaba Canal               | 信息泄露                                                     |
+|            |                             | 默认弱口令漏洞                                               |
+|            | Apache APISIX               | 身份验证绕过漏洞（CVE-2021-45232）                           |
+|            |                             | 默认密钥漏洞（CVE-2020-13945）                               |
 
 
 
@@ -372,5 +397,6 @@ Global Flags:
 本软件/工具仅供教育和研究目的使用。未经授权用于非法或恶意活动的行为是严格禁止的。开发者对任何由于使用本工具而引发的误用或法律后果概不负责。使用本工具即表示您同意遵守所有适用的法律法规。请负责任和合乎道德地使用本工具。
 
 # 加入安全交流群
+
 ![3cc96cdb9cdf4d1b3cb37ce88293b73](https://github.com/user-attachments/assets/54db88b7-9ac9-44fa-8ef9-2df0267c8c43)
 
