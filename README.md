@@ -1,6 +1,6 @@
 # 更新日志
 
-#### 2024.08.22 发布版本V1.0.4，优化Alibaba Canal、Apache APISIX 、用友NC等部分指纹，新增10个POC
+#### 2024.08.22 发布版本V1.0.4，优化Alibaba Canal、Apache APISIX 等部分指纹，新增10个POC
 
 ```
 1）、Alibaba Canal 信息泄露
@@ -9,8 +9,8 @@
 4）、ActiveMQ物理路径泄漏漏洞
 5）、Apache ActiveMQ 弱口令
 6）、Apache ActiveMQ 远程代码执行漏洞(CVE-2016-3088)
-7）、用友NC/portal/pt/psnImage/download 接口存在SQL注入漏洞
-8）、用友NC /portal/pt/link/content 接口存在SQL注入漏洞
+7）、AVCON-系统管理平台download.action存在任意文件读取漏洞
+8）、avcon综合管理平台SQL注入漏洞
 9）、Apache APISIX Dashboard 身份验证绕过漏洞（CVE-2021-45232）
 10）、Apache APISIX 默认密钥漏洞（CVE-2020-13945）
 ```
@@ -363,8 +363,6 @@ Global Flags:
 |            |                             | 用友NCfileupload命令执行漏洞                                 |
 |            |                             | 用友 NC NCFindWeb 任意文件读取漏洞                           |
 |            |                             | NC bsh.servlet.BshServlet 远程命令执行漏洞                   |
-|            |                             | /portal/pt/psnImage/download 接口存在SQL注入漏洞             |
-|            |                             | /portal/pt/link/content 接口存在SQL注入漏洞                  |
 |            | 禅道                        | 禅道16.5 SQL注入(CNVD-2022-42853)                            |
 |            |                             | 禅道11.6版本任意文件读取漏洞                                 |
 | web        | Chamilo                     | Chamilo additional_webservices.php RCE                       |
@@ -389,6 +387,8 @@ Global Flags:
 |            |                             | 默认弱口令漏洞                                               |
 |            | Apache APISIX               | 身份验证绕过漏洞（CVE-2021-45232）                           |
 |            |                             | 默认密钥漏洞（CVE-2020-13945）                               |
+|            | AVCON-系统管理平台          | download.action存在任意文件读取漏洞                          |
+|            |                             | SQL注入漏洞                                                  |
 
 
 
