@@ -1,5 +1,20 @@
 # 更新日志
 
+#### 2024.08.23 发布版本V1.0.5，新增停车场后台管理系统指纹，优化通达OA、安恒下一代防火墙、万户OA、安恒明御安全网关等指纹，新增10个POC
+
+```
+1）、Adobe-ColdFusion任意文件读取漏洞CVE-2024-20767
+2）、ACME Mini_httpd 任意文件读取漏洞 CVE-2018-18778
+3）、Apache ActiveMQ Jolokia 后台远程代码执行漏洞 CVE-2022-41678
+4）、智慧校园管理系统FileUpAd任意文件上传漏洞02
+5）、用友U8 Cloud upload.jsp接口存在任意文件上传
+6）、安恒 下一代防火墙 aaa_portal_auth_local_submit 存在远程命令执行漏洞
+7）、万户OA DocumentEdit.jsp SQL注入漏洞
+8）、万户OA DownloadServlet 任意文件读取漏洞
+9）、万户OA OfficeServer.jsp 任意文件上传漏洞
+10）、安恒-明御安全网关-文件上传
+```
+
 #### 2024.08.22 发布版本V1.0.4，优化Alibaba Canal、Apache APISIX 等部分指纹，新增10个POC
 
 ```
@@ -282,6 +297,8 @@ Global Flags:
 |            | ActiveMQ                    | 物理路径泄漏漏洞                                             |
 |            |                             | 弱口令                                                       |
 |            |                             | 远程代码执行漏洞(CVE-2016-3088)                              |
+|            |                             | CVE-2022-41678                                               |
+|            | ACME Mini_httpd             | 任意文件读取漏洞 CVE-2018-18778                              |
 | port       | CouchDB                     | 5984端口CouchDB未授权访问                                    |
 |            | Docker                      | 2375端口Docker未授权访问                                     |
 |            | Elasticsearch               | 9200端口Elasticsearch未授权访问                              |
@@ -363,8 +380,14 @@ Global Flags:
 |            |                             | 用友NCfileupload命令执行漏洞                                 |
 |            |                             | 用友 NC NCFindWeb 任意文件读取漏洞                           |
 |            |                             | NC bsh.servlet.BshServlet 远程命令执行漏洞                   |
+|            |                             | 用友U8 Cloud upload.jsp接口存在任意文件上传                  |
 |            | 禅道                        | 禅道16.5 SQL注入(CNVD-2022-42853)                            |
 |            |                             | 禅道11.6版本任意文件读取漏洞                                 |
+|            | 安恒 下一代防火墙           | aaa_portal_auth_local_submit 存在远程命令执行漏洞            |
+|            | 万户OA                      | DocumentEdit.jsp SQL注入漏洞                                 |
+|            |                             | DownloadServlet 任意文件读取漏洞                             |
+|            |                             | OfficeServer.jsp 任意文件上传漏洞                            |
+|            | 安恒-明御安全网关           | 文件上传                                                     |
 | web        | Chamilo                     | Chamilo additional_webservices.php RCE                       |
 |            | Eramba                      | Eramba任意代码执行                                           |
 |            | 红海 EHR                    | 红海 EHR 系统pc.mob sql 注入漏洞                             |
@@ -375,7 +398,8 @@ Global Flags:
 |            | 契约锁电子签章平台          | 契约锁电子签章平台add远程命令执行漏洞                        |
 |            |                             | 契约锁电子签章平台ukeysign存在远程命令执行漏洞               |
 |            | Smartbi                     | Smartbi 默认用户登陆绕过漏洞                                 |
-|            | 智慧校园安校易管理系统      | 智慧校园安校易管理系统FileUpAd任意文件上传漏洞               |
+|            | 智慧校园安校易管理系统      | FileUpAd任意文件上传漏洞01                                   |
+|            |                             | FileUpAd任意文件上传漏洞02                                   |
 |            | 云时空-社会化商业ERP系统    | 云时空-社会化商业ERP系统session泄露 接管后台                 |
 |            | 29网课交单平台              | epay.php存在SQL注入漏洞                                      |
 |            | 3C环境自动监测监控系统      | ReadLog文件读取漏洞                                          |
@@ -389,6 +413,7 @@ Global Flags:
 |            |                             | 默认密钥漏洞（CVE-2020-13945）                               |
 |            | AVCON-系统管理平台          | download.action存在任意文件读取漏洞                          |
 |            |                             | SQL注入漏洞                                                  |
+|            | Adobe-ColdFusion            | 任意文件读取漏洞CVE-2024-20767                               |
 
 
 
