@@ -1,5 +1,20 @@
 # 更新日志
 
+#### 2024.08.24 发布版本V1.0.6，修复dnslog外带bug，新增万户OA系列POC，POC数量已达150+
+
+```
+1）、万户OA TeleConferenceService XXE注入漏洞
+2）、万户OA-ezOFFICE download_ftp.jsp 接口存在任意文件读取漏洞
+3）、万户OA download_old.jsp 任意文件下载漏洞
+4）、万户OA downloadhttp.jsp 任意文件下载漏洞
+5）、万户OA fileUpload.controller 任意文件上传漏洞
+6）、万户OA smartUpload.jsp 任意文件上传漏洞
+7）、万户OA text2Html 任意文件读取
+8）、万户协同办公平台ezoffice wpsservlet接口存在任意文件上传漏洞
+9）、万户OA-contract_gd-sql注入
+10）、万户OA-senddocument_import.jsp任意文件上传
+```
+
 #### 2024.08.23 发布版本V1.0.5，新增停车场后台管理系统指纹，优化通达OA、安恒下一代防火墙、万户OA、安恒明御安全网关等指纹，新增10个POC
 
 ```
@@ -384,8 +399,18 @@ Global Flags:
 |            | 禅道                        | 禅道16.5 SQL注入(CNVD-2022-42853)                            |
 |            |                             | 禅道11.6版本任意文件读取漏洞                                 |
 |            | 安恒 下一代防火墙           | aaa_portal_auth_local_submit 存在远程命令执行漏洞            |
-|            | 万户OA                      | DocumentEdit.jsp SQL注入漏洞                                 |
-|            |                             | DownloadServlet 任意文件读取漏洞                             |
+|            | 万户OA                      | 万户OADocumentEdit.jsp SQL注入漏洞                           |
+|            |                             | 万户OADownloadServlet 任意文件读取漏洞                       |
+|            |                             | 万户OA TeleConferenceService XXE注入漏洞                     |
+|            |                             | 万户OA-ezOFFICE download_ftp.jsp 接口存在任意文件读取漏洞    |
+|            |                             | 万户OA download_old.jsp 任意文件下载漏洞                     |
+|            |                             | 万户OA downloadhttp.jsp 任意文件下载漏洞                     |
+|            |                             | 万户OA fileUpload.controller 任意文件上传漏洞                |
+|            |                             | 万户OA smartUpload.jsp 任意文件上传漏洞                      |
+|            |                             | 万户OA text2Html 任意文件读取                                |
+|            |                             | 万户协同办公平台ezoffice wpsservlet接口存在任意文件上传漏洞  |
+|            |                             | 万户OA-contract_gd-sql注入                                   |
+|            |                             | 万户OA-senddocument_import.jsp任意文件上传                   |
 |            |                             | OfficeServer.jsp 任意文件上传漏洞                            |
 |            | 安恒-明御安全网关           | 文件上传                                                     |
 | web        | Chamilo                     | Chamilo additional_webservices.php RCE                       |
