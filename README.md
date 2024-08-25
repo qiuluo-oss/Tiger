@@ -1,5 +1,20 @@
 # 更新日志
 
+#### 2024.08.25 发布版本V1.0.7，新增点企来 客服系统 指纹，优化万户OA指纹、H3C iMC智能管理中心指纹，新增10个POC
+
+```
+1）、瑞斯康达智能网关list_base_config.php接口存在远程命令执行漏洞
+2）、Apache Couchdb 远程权限提升(CVE-2017-12635) 
+3）、通达OA v2014 get_contactlist.php 敏感信息泄漏
+4）、通达OA v2017 action_upload.php 任意文件上传
+5）、通达OA v2017 login_code.php 任意用户登录
+6）、H3C IMC智能管理中心autoDeploy.xhtml;.png接口存在远程命令执行漏洞
+7）、点企来 客服系统 getwaitnum sql注入漏洞
+8）、Apache Druid任意文件读取复现(CVE-2021-36749)
+9）、华夏ERP getAllList接口存在敏感信息泄露
+10）、Apache Druid 远程代码执行漏洞 (CVE-2021-25646)
+```
+
 #### 2024.08.24 发布版本V1.0.6，修复dnslog外带bug，新增万户OA系列POC，POC数量已达150+
 
 ```
@@ -340,12 +355,18 @@ Global Flags:
 |            | druid                       | Alibaba Druid Monitor 弱口令                                 |
 |            |                             | Alibaba Druid Monitor 未授权访问                             |
 |            |                             | Apache Druid 未授权访问                                      |
+|            |                             | Apache Druid任意文件读取复现(CVE-2021-36749)                 |
+|            |                             | Apache Druid 远程代码执行漏洞 (CVE-2021-25646)               |
 |            | finereport                  | CNVD-2018-04757                                              |
 |            | fastjson                    | CVE-2017-18349                                               |
 |            | 中远麒麟堡垒机              | 中远麒麟堡垒机admin.php 存在SQL 注入漏洞                     |
+|            | 瑞斯康达智能网关            | list_base_config.php接口存在远程命令执行漏洞                 |
+|            | Apache Couchdb              | 远程权限提升(CVE-2017-12635)                                 |
+|            | 华夏ERP                     | getAllList接口存在敏感信息泄露                               |
 |            | H3C                         | H3C IMC dynamiccontent.properties.xhtm 远程命令执行          |
 |            |                             | H3C多系列路由器前台RCE漏洞                                   |
 |            |                             | H3C iMC智能管理中心 RCE                                      |
+|            |                             | H3C IMC智能管理中心autoDeploy.xhtml;.png接口存在远程命令执行漏洞 |
 |            | HIKVISION                   | HIKVISION 综合安防管理平台env信息泄露                        |
 |            |                             | 海康威视isecure center 综合安防管理平台存在任意文件上传漏洞  |
 |            |                             | HIKVISION视频编码设备任意文件下载                            |
@@ -382,6 +403,9 @@ Global Flags:
 |            |                             | 通达OA v11.6 insert SQL注入漏洞                              |
 |            |                             | 通达OA v11.9 getdata 任意命令执行漏洞                        |
 |            |                             | 通达OA v2017 video_file.php 任意文件下载漏洞                 |
+|            |                             | 通达OA v2014 get_contactlist.php 敏感信息泄漏                |
+|            |                             | 通达OA v2017 action_upload.php 任意文件上传                  |
+|            |                             | 通达OA v2017 login_code.php 任意用户登录                     |
 |            | 泛微                        | 泛微Weaver E-Office9前台文件包含                             |
 |            |                             | 泛微E-Office9文件上传漏洞                                    |
 |            |                             | 泛微E-Cology9 WorkPlanService 前台SQL注入漏洞(XVE-2024-18112) |
@@ -439,6 +463,7 @@ Global Flags:
 |            | AVCON-系统管理平台          | download.action存在任意文件读取漏洞                          |
 |            |                             | SQL注入漏洞                                                  |
 |            | Adobe-ColdFusion            | 任意文件读取漏洞CVE-2024-20767                               |
+|            | 点企来 客服系统             | getwaitnum sql注入漏洞                                       |
 
 
 
