@@ -1,5 +1,20 @@
 # 更新日志
 
+#### 2024.08.26 发布版本V1.0.7，新增致远互联分析云指纹、章管家指纹，优化大华智慧园区综合管理平台、Apache-hadoop、Apache-Kylin指纹，新增10个POC
+
+```
+1）、用友GRP-U8 userInfoWeb SQL注入
+2）、致远互联-分析云 getolapconnectionlist 逻辑漏洞
+3）、章管家任意文件上传
+4）、nginxWebUI(v4.2.2) 前台RCE
+5）、大华智慧园区综合管理平台-wpms groupinfo-resendgroup sql注入
+6）、万户OA-receivefile_gd.jsp SQL注入漏洞
+7）、Apache Flink目录穿透(CVE-2020-17519)
+8）、Apache Flink 上传路径遍历（CVE-2020-17518）
+9）、Apache Hadoop反序列化漏洞(CVE-2021-25642)
+10）、Apache Kylin 未授权配置泄露(CVE-2020-13937)
+```
+
 #### 2024.08.25 发布版本V1.0.7，新增点企来客服系统指纹、华夏ERP指纹，优化万户OA指纹、H3C iMC智能管理中心指纹，新增10个POC
 
 ```
@@ -13,12 +28,6 @@
 8）、Apache Druid任意文件读取复现(CVE-2021-36749)
 9）、华夏ERP getAllList接口存在敏感信息泄露
 10）、Apache Druid 远程代码执行漏洞 (CVE-2021-25646)
-```
-
-#### V1.0.7 下载地址
-
-```
-关注螺丝鸽安全公众号，回复：【Tiger-v1.0.7】即可获得下载地址
 ```
 
 #### 2024.08.24 发布版本V1.0.6，修复dnslog外带bug，新增万户OA系列POC，POC数量已达150+
@@ -324,6 +333,7 @@ Global Flags:
 |            | nodejs                      | CVE-2021-21315                                               |
 |            |                             | CVE-2017-14849                                               |
 | middleware | nginx                       | nginxWebUI远程命令执行                                       |
+|            |                             | nginxWebUI(v4.2.2) 前台RCE                                   |
 |            |                             | Nginx 解析漏洞                                               |
 |            | Tomcat                      | CVE-2017-12615                                               |
 |            |                             | CVE-2019-0232                                                |
@@ -358,6 +368,7 @@ Global Flags:
 |            |                             | 大华智慧园区综合管理平台 任意文件读取漏洞                    |
 |            |                             | 大华智慧园区任意密码读取漏洞                                 |
 |            |                             | 大华智慧园区综合管理平台 video 任意文件上传漏洞              |
+|            |                             | 大华智慧园区综合管理平台-wpms groupinfo-resendgroup sql注入  |
 |            | druid                       | Alibaba Druid Monitor 弱口令                                 |
 |            |                             | Alibaba Druid Monitor 未授权访问                             |
 |            |                             | Apache Druid 未授权访问                                      |
@@ -396,6 +407,7 @@ Global Flags:
 |            |                             | 致远OA Session泄露(thirdpartyController.do)漏洞              |
 |            |                             | 致远OA M1 server RCE                                         |
 |            |                             | 致远M1移动端存在未授权访问                                   |
+|            |                             | 致远互联-分析云 getolapconnectionlist 逻辑漏洞               |
 |            | 亿赛通 电子文档安全管理系统 | UploadFileFromClientServiceForClient接口存在任意文件上传漏洞 |
 |            | 深信服                      | 深信服SG上网管理系统任意文件读取                             |
 |            |                             | 深信服应用交付报表系统 文件读取                              |
@@ -426,6 +438,7 @@ Global Flags:
 |            |                             | 用友 NC NCFindWeb 任意文件读取漏洞                           |
 |            |                             | NC bsh.servlet.BshServlet 远程命令执行漏洞                   |
 |            |                             | 用友U8 Cloud upload.jsp接口存在任意文件上传                  |
+|            |                             | 用友GRP-U8 userInfoWeb SQL注入                               |
 |            | 禅道                        | 禅道16.5 SQL注入(CNVD-2022-42853)                            |
 |            |                             | 禅道11.6版本任意文件读取漏洞                                 |
 |            | 安恒 下一代防火墙           | aaa_portal_auth_local_submit 存在远程命令执行漏洞            |
@@ -442,6 +455,7 @@ Global Flags:
 |            |                             | 万户OA-contract_gd-sql注入                                   |
 |            |                             | 万户OA-senddocument_import.jsp任意文件上传                   |
 |            |                             | OfficeServer.jsp 任意文件上传漏洞                            |
+|            |                             | 万户OA-receivefile_gd.jsp SQL注入漏洞                        |
 |            | 安恒-明御安全网关           | 文件上传                                                     |
 | web        | Chamilo                     | Chamilo additional_webservices.php RCE                       |
 |            | Eramba                      | Eramba任意代码执行                                           |
@@ -470,11 +484,15 @@ Global Flags:
 |            |                             | SQL注入漏洞                                                  |
 |            | Adobe-ColdFusion            | 任意文件读取漏洞CVE-2024-20767                               |
 |            | 点企来 客服系统             | getwaitnum sql注入漏洞                                       |
+|            | 章管家                      | 任意文件上传                                                 |
+|            | Apache Flink                | 目录穿透(CVE-2020-17519)                                     |
+|            |                             | 上传路径遍历（CVE-2020-17518）                               |
+|            | Apache Hadoop               | 反序列化漏洞(CVE-2021-25642)                                 |
+|            | Apache Kylin                | 未授权配置泄露(CVE-2020-13937)                               |
 
 
 
 # 免责声明：
 
 本工具（Tiger）仅供教育和研究目的使用。未经授权用于非法或恶意活动的行为是严格禁止的。由于传播或利用此工具（Tiger）而造成的任何直接或间接的后果及损失，均由使用者本人负责，工具开发者不为此承担任何责任。
-
 
