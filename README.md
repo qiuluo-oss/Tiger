@@ -15,6 +15,29 @@
 10）、帮管客系统存在用户名密码信息泄露
 ```
 
+#### 截至今天为止，已经把万户OA系列的漏洞全部加进来，包括nday和hw爆出来的1day，总共18个POC
+
+```
+1）、万户OADocumentEdit.jsp SQL注入漏洞 
+2）、万户OADownloadServlet 任意文件读取漏洞                       
+3）、万户OA TeleConferenceService XXE注入漏洞                     
+4）、万户OA-ezOFFICE download_ftp.jsp 接口存在任意文件读取漏洞    
+5）、万户OA download_old.jsp 任意文件下载漏洞                     
+6）、万户OA downloadhttp.jsp 任意文件下载漏洞                     
+7）、万户OA fileUpload.controller 任意文件上传漏洞                
+8）、万户OA smartUpload.jsp 任意文件上传漏洞                      
+9）、万户OA text2Html 任意文件读取                                
+10）、万户协同办公平台ezoffice wpsservlet接口存在任意文件上传漏洞  
+11）、万户OA-contract_gd-sql注入                                   
+12）、万户OA-senddocument_import.jsp任意文件上传                   
+13）、OfficeServer.jsp 任意文件上传漏洞                            
+14）、万户OA-receivefile_gd.jsp SQL注入漏洞                        
+15）、万户协同办公平台 ezoffice存在未授权访问漏洞                  
+16）、万户ezOFFICE协同管理平台SendFileCheckTemplateEdit-SQL注入漏洞 
+17）、万户协同办公平台 pic.jsp SQL注入漏洞                         
+18）、万户OA RhinoScriptEngineService接口存在命令执行漏洞 
+```
+
 #### V1.0.9下载地址
 
 ```
