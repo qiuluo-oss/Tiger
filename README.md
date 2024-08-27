@@ -1,5 +1,26 @@
 # 更新日志
 
+#### 2024.08.27 发布版本V1.0.9，新增全程云OA指纹、帮管客CRM客户管理系统指纹，优化用友-U8-Cloud指纹、Apache Mod_jk指纹，新增10个POC
+
+```
+1）、万户协同办公平台 ezoffice存在未授权访问漏洞
+2）、万户ezOFFICE协同管理平台SendFileCheckTemplateEdit-SQL注入漏洞
+3）、万户协同办公平台 pic.jsp SQL注入漏洞
+4）、万户OA RhinoScriptEngineService接口存在命令执行漏洞
+5）、Apache Mod_jk 访问控制权限绕过(CVE-2018-11759)
+6）、全程云OA接口UploadFile文件上传
+7）、Apache Solr 任意文件读取漏洞
+8）、帮管客CRM 客户管理系统/index.php/jiliyu 接口存在 sql 注入漏洞
+9）、帮管客CRM 客户管理系统/index.php/message 接口存在 sql 注入漏洞
+10）、帮管客系统存在用户名密码信息泄露
+```
+
+#### V1.0.9下载地址
+
+```
+关注螺丝鸽安全，后台回复：【Tiger-v1.0.9】即可获得下载地址
+```
+
 #### 2024.08.26 发布版本V1.0.8，新增致远互联分析云指纹、章管家指纹，优化大华智慧园区综合管理平台、Apache-hadoop、Apache-Kylin指纹，新增10个POC
 
 ```
@@ -13,12 +34,6 @@
 8）、Apache Flink 上传路径遍历（CVE-2020-17518）
 9）、Apache Hadoop反序列化漏洞(CVE-2021-25642)
 10）、Apache Kylin 未授权配置泄露(CVE-2020-13937)
-```
-
-#### V1.0.8下载地址
-
-```
-关注螺丝鸽安全，后台回复：【Tiger-v1.0.8】即可获得下载地址
 ```
 
 #### 2024.08.25 发布版本V1.0.7，新增点企来客服系统指纹、华夏ERP指纹，优化万户OA指纹、H3C iMC智能管理中心指纹，新增10个POC
@@ -462,7 +477,15 @@ Global Flags:
 |            |                             | 万户OA-senddocument_import.jsp任意文件上传                   |
 |            |                             | OfficeServer.jsp 任意文件上传漏洞                            |
 |            |                             | 万户OA-receivefile_gd.jsp SQL注入漏洞                        |
+|            |                             | 万户协同办公平台 ezoffice存在未授权访问漏洞                  |
+|            |                             | 万户ezOFFICE协同管理平台SendFileCheckTemplateEdit-SQL注入漏洞 |
+|            |                             | 万户协同办公平台 pic.jsp SQL注入漏洞                         |
+|            |                             | 万户OA RhinoScriptEngineService接口存在命令执行漏洞          |
 |            | 安恒-明御安全网关           | 文件上传                                                     |
+|            | 全程云OA                    | 接口UploadFile文件上传                                       |
+|            | 帮管客CRM 客户管理系统      | /index.php/jiliyu 接口存在 sql 注入漏洞                      |
+|            |                             | /index.php/message 接口存在 sql 注入漏洞                     |
+|            |                             | 帮管客系统存在用户名密码信息泄露                             |
 | web        | Chamilo                     | Chamilo additional_webservices.php RCE                       |
 |            | Eramba                      | Eramba任意代码执行                                           |
 |            | 红海 EHR                    | 红海 EHR 系统pc.mob sql 注入漏洞                             |
@@ -495,6 +518,8 @@ Global Flags:
 |            |                             | 上传路径遍历（CVE-2020-17518）                               |
 |            | Apache Hadoop               | 反序列化漏洞(CVE-2021-25642)                                 |
 |            | Apache Kylin                | 未授权配置泄露(CVE-2020-13937)                               |
+|            | Apache Mod_jk               | 访问控制权限绕过(CVE-2018-11759)                             |
+|            | Apache Solr                 | 任意文件读取漏洞                                             |
 
 
 
