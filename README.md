@@ -1,21 +1,25 @@
 # 更新日志
 
-#### 2024.08.27 发布版本V1.0.9，新增全程云OA指纹、帮管客CRM客户管理系统指纹，优化用友-U8-Cloud指纹、Apache Mod_jk指纹，新增10个POC
+#### 2024.08.28 发布版本V1.1.0，新增中国移动 禹路由指纹，优化碧海威指纹、BSPHP网络验证系统指纹，新增12个POC，截至目前POC数量已达200+
 
 ```
-1）、万户协同办公平台 ezoffice存在未授权访问漏洞
-2）、万户ezOFFICE协同管理平台SendFileCheckTemplateEdit-SQL注入漏洞
-3）、万户协同办公平台 pic.jsp SQL注入漏洞
-4）、万户OA RhinoScriptEngineService接口存在命令执行漏洞
-5）、Apache Mod_jk 访问控制权限绕过(CVE-2018-11759)
-6）、全程云OA接口UploadFile文件上传
-7）、Apache Solr 任意文件读取漏洞
-8）、帮管客CRM 客户管理系统/index.php/jiliyu 接口存在 sql 注入漏洞
-9）、帮管客CRM 客户管理系统/index.php/message 接口存在 sql 注入漏洞
-10）、帮管客系统存在用户名密码信息泄露
+1）、帮管客CRM ajax_upload_chat、ajax_upload等接口处存在文件上传漏洞
+2）、帮管客CRM 密码重置漏洞
+3）、帮管客系统存在用户信息泄露
+4）、帮管客CRM 任意用户添加
+5）、碧海威 L7 弱口令漏洞
+6）、用友NC/portal/pt/psnImage/download 接口存在SQL注入漏洞
+7）、用友NC /portal/pt/link/content 接口存在SQL注入漏洞
+8）、一米OA getfile.jsp 任意文件读取漏洞
+9）、BSPHP 未授权访问 信息泄露漏洞
+10）、C-Lodop 云打印机系统平台任意文件读取漏洞
+11）、C-Lodop 云打印机系统未授权
+12）、中国移动 禹路由 ExportSettings.sh 敏感信息泄露漏洞
 ```
 
-#### 截至今天为止，已经把万户OA系列的漏洞全部加进来，包括nday和hw爆出来的1day，总共18个POC，在漏洞扫描前先确认指纹识别是否正确
+#### 截至目前，已经内置万户OA全系列POC、帮管客CRM全系列POC、C-Lodop 云打印机全系列POC，我们将会持续更新常用的、重要的资产全系列POC
+
+**1、万户OA全系列POC，包括nday和HW爆出的1day，POC数量总共18个**
 
 ```
 1）、万户OADocumentEdit.jsp SQL注入漏洞 
@@ -30,7 +34,7 @@
 10）、万户协同办公平台ezoffice wpsservlet接口存在任意文件上传漏洞  
 11）、万户OA-contract_gd-sql注入                                   
 12）、万户OA-senddocument_import.jsp任意文件上传                   
-13）、OfficeServer.jsp 任意文件上传漏洞                            
+13）、万户OA OfficeServer.jsp 任意文件上传漏洞                            
 14）、万户OA-receivefile_gd.jsp SQL注入漏洞                        
 15）、万户协同办公平台 ezoffice存在未授权访问漏洞                  
 16）、万户ezOFFICE协同管理平台SendFileCheckTemplateEdit-SQL注入漏洞 
@@ -38,10 +42,44 @@
 18）、万户OA RhinoScriptEngineService接口存在命令执行漏洞 
 ```
 
-#### V1.0.9下载地址
+**2、帮管客CRM全系列POC，POC数量总共7个**
 
 ```
-关注螺丝鸽安全，后台回复：【Tiger-v1.0.9】即可获得下载地址
+1）、帮管客CRM 任意用户添加
+2）、帮管客CRM ajax_upload_chat、ajax_upload等接口处存在文件上传漏洞
+3）、帮管客CRM 客户管理系统/index.php/jiliyu 接口存在 sql 注入漏洞
+4）、帮管客CRM 客户管理系统/index.php/message 接口存在 sql 注入漏洞
+5）、帮管客系统存在用户信息泄露
+6）、帮管客系统存在用户名密码信息泄露
+7）、帮管客CRM 密码重置漏洞
+```
+
+**3、C-Lodop 云打印机全系列POC，POC数量总共2个**
+
+```
+1）、C-Lodop 云打印机系统平台任意文件读取漏洞
+2）、C-Lodop 云打印机系统未授权
+```
+
+#### V1.1.0下载地址
+
+```
+关注螺丝鸽安全，后台回复：【Tiger-v1.1.0】即可获得下载地址
+```
+
+#### 2024.08.27 发布版本V1.0.9，新增全程云OA指纹、帮管客CRM客户管理系统指纹，优化用友-U8-Cloud指纹、Apache Mod_jk指纹，新增10个POC
+
+```
+1）、万户协同办公平台 ezoffice存在未授权访问漏洞
+2）、万户ezOFFICE协同管理平台SendFileCheckTemplateEdit-SQL注入漏洞
+3）、万户协同办公平台 pic.jsp SQL注入漏洞
+4）、万户OA RhinoScriptEngineService接口存在命令执行漏洞
+5）、Apache Mod_jk 访问控制权限绕过(CVE-2018-11759)
+6）、全程云OA接口UploadFile文件上传
+7）、Apache Solr 任意文件读取漏洞
+8）、帮管客CRM 客户管理系统/index.php/jiliyu 接口存在 sql 注入漏洞
+9）、帮管客CRM 客户管理系统/index.php/message 接口存在 sql 注入漏洞
+10）、帮管客系统存在用户名密码信息泄露
 ```
 
 #### 2024.08.26 发布版本V1.0.8，新增致远互联分析云指纹、章管家指纹，优化大华智慧园区综合管理平台、Apache-hadoop、Apache-Kylin指纹，新增10个POC
@@ -483,6 +521,8 @@ Global Flags:
 |            |                             | NC bsh.servlet.BshServlet 远程命令执行漏洞                   |
 |            |                             | 用友U8 Cloud upload.jsp接口存在任意文件上传                  |
 |            |                             | 用友GRP-U8 userInfoWeb SQL注入                               |
+|            |                             | 用友NC/portal/pt/psnImage/download 接口存在SQL注入漏洞       |
+|            |                             | 用友NC /portal/pt/link/content 接口存在SQL注入漏洞           |
 |            | 禅道                        | 禅道16.5 SQL注入(CNVD-2022-42853)                            |
 |            |                             | 禅道11.6版本任意文件读取漏洞                                 |
 |            | 安恒 下一代防火墙           | aaa_portal_auth_local_submit 存在远程命令执行漏洞            |
@@ -509,6 +549,14 @@ Global Flags:
 |            | 帮管客CRM 客户管理系统      | /index.php/jiliyu 接口存在 sql 注入漏洞                      |
 |            |                             | /index.php/message 接口存在 sql 注入漏洞                     |
 |            |                             | 帮管客系统存在用户名密码信息泄露                             |
+|            |                             | 帮管客CRM ajax_upload_chat、ajax_upload等接口处存在文件上传漏洞 |
+|            |                             | 帮管客CRM 密码重置漏洞                                       |
+|            |                             | 帮管客系统存在用户信息泄露                                   |
+|            |                             | 帮管客CRM 任意用户添加                                       |
+|            | 一米OA                      | getfile.jsp 任意文件读取漏洞                                 |
+|            | C-Lodop 云打印机系统        | 任意文件读取漏洞                                             |
+|            |                             | 未授权                                                       |
+|            | 中国移动 禹路由             | ExportSettings.sh 敏感信息泄露漏洞                           |
 | web        | Chamilo                     | Chamilo additional_webservices.php RCE                       |
 |            | Eramba                      | Eramba任意代码执行                                           |
 |            | 红海 EHR                    | 红海 EHR 系统pc.mob sql 注入漏洞                             |
@@ -543,6 +591,8 @@ Global Flags:
 |            | Apache Kylin                | 未授权配置泄露(CVE-2020-13937)                               |
 |            | Apache Mod_jk               | 访问控制权限绕过(CVE-2018-11759)                             |
 |            | Apache Solr                 | 任意文件读取漏洞                                             |
+|            | 碧海威                      | 碧海威 L7 弱口令漏洞                                         |
+|            | BSPHP                       | 未授权访问 信息泄露漏洞                                      |
 
 
 
